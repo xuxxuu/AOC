@@ -4,7 +4,7 @@ tests_dir = Path(__file__).absolute().parent.parent / Path("tests/")
 input_dir = Path(__file__).absolute().parent.parent / Path("inputs/")
 
 with open(input_dir / "1.txt") as f:
-    data = f.read().strip().split()
+    data = f.read().strip().split("\n")
 
 
 data = list(map(int, data))
