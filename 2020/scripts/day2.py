@@ -9,6 +9,7 @@ with open(input_dir / "2.txt") as f:
 part1_total = 0
 part2_total = 0
 
+
 def is_valid(minimum, maximum, target, password):
     if any(minimum <= password.count(target) <= maximum for letter in password):
         return True
@@ -21,9 +22,9 @@ for line in data:
     target = policy_str.split(" ")[1]
     if is_valid(minimum, maximum, target, password):
         part1_total += 1
-    if password[minimum-1] == target and not password[maximum-1] == target:
+    if password[minimum - 1] == target and not password[maximum - 1] == target:
         part2_total += 1
-    elif password[maximum-1] == target and not password[minimum-1] == target:
+    elif password[maximum - 1] == target and not password[minimum - 1] == target:
         part2_total += 1
 
 print(f"{part1_total} valid passwords for part 1")
