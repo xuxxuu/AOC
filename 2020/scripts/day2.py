@@ -1,6 +1,5 @@
 from pathlib import Path
 
-tests_dir = Path(__file__).absolute().parent.parent / Path("tests/")
 input_dir = Path(__file__).absolute().parent.parent / Path("inputs/")
 
 with open(input_dir / "2.txt") as f:
@@ -34,9 +33,13 @@ print(f"{part2_total} valid passwords for part 2")
 # idiotic solution for p1 for the memes
 # p1 = sum([
 #     is_valid(
+#         # minimum value
 #         int(line.split(": ")[0].split(" ")[0].split("-")[0]),
+#         # maximum value
 #         int(line.split(": ")[0].split(" ")[0].split("-")[1]),
+#         # target letter
 #         line.split(": ")[0].split(" ")[1],
+#         # password to check
 #         line.split(": ")[1]
 #              )
 #     for line in data
